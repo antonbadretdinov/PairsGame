@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var img = [];
+		img[0] = $('<img>');
+		$(img[0]).attr("src","img/01.png");
+
+		var img = [];
+		img[1] = $('<img>');
+		$(img[1]).attr("src","img/02.png");
+
+		var img = [];
+		img[2] = $('<img>');
+		$(img[2]).attr("src","img/03.png");
+
+		var img = [];
+		img[3] = $('<img>');
+		$(img[3]).attr("src","img/04.png");
+
+		var img = [];
+		img[4] = $('<img>');
+		$(img[4]).attr("src","img/05.png");
+		
+		
+		$('td').text(function(){ 
+			var x = Math.floor((Math.random() * 5) + 0);
+			img[x]; 
+	});
+		$('td').each(function(){
+			var x = Math.floor((Math.random() * 5) + 0);
+			$('ul li:nth-child').append(td[x]);
+			
+		})
+		//нашёл код мэмори, это рандом. в гугле там ещё много нужного.
+		// // Fisher--Yates Algorithm -- https://bost.ocks.org/mike/shuffle/
+		// shuffle: function(array){
+		// 	var counter = array.length, temp, index;
+	   	// // While there are elements in the array
+	   	// while (counter > 0) {
+        // 	// Pick a random index
+        // 	index = Math.floor(Math.random() * counter);
+        // 	// Decrease counter by 1
+        // 	counter--;
+        // 	// And swap the last element with it
+        // 	temp = array[counter];
+        // 	array[counter] = array[index];
+        // 	array[index] = temp;
+	    // 	}
+	    // 	return array;// я добавил картинки(папку), короче надо через nth-child сделать, я не понмю как(на доске вроде писали сегодня) 
+	</script>
+	
+</body>
+</html>
